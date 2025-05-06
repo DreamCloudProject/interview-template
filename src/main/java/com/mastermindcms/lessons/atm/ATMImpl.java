@@ -28,7 +28,7 @@ public class ATMImpl implements ATM {
             for (String n : noms) {
                 long needs = amount / Integer.parseInt(n);
                 long remaining = banknotes.get(n) - needs;
-                if(remaining >= 0) {
+                if(remaining > 0) {
                     Map<String,Long> res = new HashMap<>();
                     res.put(n,needs);
                     response.setAmount(amount);
